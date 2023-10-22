@@ -1,0 +1,71 @@
+import 'package:flutter/material.dart';
+import 'package:vxport/src/features/main/presentation/components/expandable_side_item.dart';
+import 'package:google_fonts/google_fonts.dart';
+
+class AboutTheWebsite extends StatelessWidget {
+  const AboutTheWebsite({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        const ExpandableSideItem(
+          title: "about",
+          isExpanded: true,
+        ),
+        const SizedBox(height: 24),
+        Center(
+          child: Image.asset(
+            "assets/vxport.png",
+            width: 200,
+            height: 200,
+            fit: BoxFit.cover,
+          ),
+        ),
+        const SizedBox(height: 16),
+        Text(
+          "VXPort",
+          style: GoogleFonts.lato(
+            fontSize: 24,
+            fontWeight: FontWeight.w500,
+            letterSpacing: 24 / 22,
+          ),
+        ),
+        Text(
+          "v0.1.0",
+          style: GoogleFonts.lato(
+            fontSize: 18,
+            fontWeight: FontWeight.w300,
+            letterSpacing: 18 / 16,
+          ),
+        ),
+        const SizedBox(height: 4),
+        Text(
+          "Web Portfolio made using Flutter",
+          style: GoogleFonts.lato(
+            fontSize: 18,
+            fontWeight: FontWeight.w300,
+            letterSpacing: 18 / 16,
+          ),
+        ),
+        Text(
+          "(Inspired from VSCode)",
+          style: GoogleFonts.lato(
+            fontSize: 18,
+            fontWeight: FontWeight.w300,
+            letterSpacing: 18 / 16,
+          ),
+        ),
+        const SizedBox(height: 8),
+        Text(
+          "Created by Prateek Sunal",
+          style: GoogleFonts.lato(
+            fontSize: 16,
+            fontWeight: FontWeight.w400,
+            letterSpacing: 16 / 14,
+          ),
+        ),
+      ],
+    );
+  }
+}
