@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:vxport/src/common_widgets/background_image.dart';
-import 'package:vxport/src/common_widgets/blur_backdrop.dart';
 import 'package:vxport/src/features/main/presentation/main_window_area.dart';
 import 'package:google_fonts/google_fonts.dart';
 
