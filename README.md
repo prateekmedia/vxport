@@ -2,7 +2,7 @@
 
 # welcome to the era of VXPort
 
-This is my Web based Portfolio inspired from Visual Studio Code's UI. It was written under 6 hours, so bugs may appear.
+This is my Web based Portfolio inspired from Visual Studio Code's UI. It's using cutting edge Flutter Web so bugs may appear.
 
 [![screenshot](https://github.com/prateekmedia/vxport/assets/41370460/925ec9e4-43bc-4026-a9b5-67df644b0a2b)](https://prateek.sunal.in)
 
