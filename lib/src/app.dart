@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:vxport/src/common_widgets/background_image.dart';
+import 'package:vxport/src/features/main/application/flash_provider.dart';
 import 'package:vxport/src/features/main/presentation/main_window_area.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,23 +26,32 @@ class App extends StatelessWidget {
   }
 }
 
-class AppFrame extends StatelessWidget {
+class AppFrame extends ConsumerWidget {
   const AppFrame({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
+  Widget build(BuildContext context, ref) {
+    final flash = ref.watch(flashProvider);
+
+    return Scaffold(
       body: Stack(
         fit: StackFit.expand,
         children: [
-          SizedBox(
+          const SizedBox(
             width: double.infinity,
             child: BackgroundImage(),
           ),
           // BlurBackdrop(),
-          Positioned.fill(child: MainWindowArea())
+          const Positioned.fill(child: MainWindowArea()),
+          IgnorePointer(
+            ignoring: !flash,
+            child: AnimatedContainer(
+              color: flash ? const Color(0xFFFFFFFF) : const Color(0x00000000),
+              duration: const Duration(milliseconds: 300),
+            ),
+          ),
         ],
       ),
     );

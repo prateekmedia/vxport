@@ -7,8 +7,6 @@ This is my Web based Portfolio inspired from Visual Studio Code's UI. It was wri
 [![screenshot](https://github.com/prateekmedia/vxport/assets/41370460/925ec9e4-43bc-4026-a9b5-67df644b0a2b)](https://prateek.sunal.in)
 
 
-## What am I?
+## What is this?
 
-### Why am I?
-
-Who am I?
+This repository contains the sauce for my web portfolio

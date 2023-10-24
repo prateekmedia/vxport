@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
-import 'package:flutter_highlight/themes/monokai-sublime.dart';
 import 'package:vxport/src/common_widgets/dividers.dart';
 import 'package:vxport/src/common_widgets/mouse_handler.dart';
 import 'package:vxport/src/features/main/application/code_controller_provider.dart';
+import 'package:vxport/src/features/main/application/code_style_provider.dart';
 import 'package:vxport/src/features/main/application/selected_file_index_provider.dart';
 import 'package:vxport/src/features/main/application/toc_controller_provider.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -47,7 +47,9 @@ class CodeComponent extends ConsumerWidget {
                     configs: [
                       LinkConfig(
                         style: GoogleFonts.lato(
-                          color: Colors.yellow,
+                          color:
+                              ref.watch(codeStyleProvider)["string"]?.color ??
+                                  Colors.yellow,
                           decoration: TextDecoration.underline,
                         ),
                         onTap: (url) => launchUrlString(url),
@@ -138,8 +140,10 @@ class CodeArea extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     final controller = ref.read(codeControllerProvider);
+    final codeStyle = ref.watch(codeStyleProvider);
+
     return CodeTheme(
-      data: CodeThemeData(styles: monokaiSublimeTheme),
+      data: CodeThemeData(styles: codeStyle),
       child: SingleChildScrollView(
         child: CodeField(
           readOnly: true,
@@ -216,7 +220,7 @@ class OpenFileItem extends ConsumerWidget {
                 shortpath,
                 style: GoogleFonts.lato(
                   fontSize: 17,
-                  fontWeight: FontWeight.w600,
+                  fontWeight: FontWeight.w300,
                 ),
               ),
             ),

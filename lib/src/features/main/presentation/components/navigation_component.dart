@@ -42,7 +42,7 @@ class _NavigationComponentState extends State<NavigationComponent> {
         const Spacer(),
         const NavigationButton(
           tooltip: "Settings",
-          index: -1,
+          index: 4,
           icon: LucideIcons.settings,
         ),
       ],

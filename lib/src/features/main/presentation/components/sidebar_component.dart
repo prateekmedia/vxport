@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:vxport/src/features/about/presentation/about_the_website.dart';
 import 'package:vxport/src/features/main/application/navigation_item_state.dart';
-import 'package:vxport/src/features/main/presentation/explorer/explorer_widget.dart';
-import 'package:vxport/src/features/main/presentation/explorer/links_widget.dart';
+import 'package:vxport/src/features/main/presentation/sidebar/explorer_widget.dart';
+import 'package:vxport/src/features/main/presentation/sidebar/links_widget.dart';
+import 'package:vxport/src/features/main/presentation/sidebar/settings_widget.dart';
 import 'package:vxport/src/features/projects/presentation/projects_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -15,7 +16,13 @@ class SidebarComponent extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final names = ["Explorer", "Projects", "Links", "About Website"];
+    final names = [
+      "Explorer",
+      "Projects",
+      "Links",
+      "About Website",
+      "Settings"
+    ];
     final index = ref.watch(navigationItemStateProvider);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -48,6 +55,7 @@ class SidebarComponent extends ConsumerWidget {
             1 => const ProjectsWidget(),
             2 => const LinksWidget(),
             3 => const AboutTheWebsite(),
+            4 => const SettingsWidget(),
             _ => const SizedBox(),
           },
         ),

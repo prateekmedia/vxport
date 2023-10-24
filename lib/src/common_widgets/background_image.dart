@@ -1,22 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:blur/blur.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:vxport/src/features/main/application/bg_state_provider.dart';
 
-class BackgroundImage extends StatelessWidget {
+class BackgroundImage extends ConsumerWidget {
   const BackgroundImage({
     super.key,
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, ref) {
+    final bgState = ref.watch(bgStateProvider);
+
     return SizedBox(
         height: double.infinity,
         width: double.infinity,
         child: Image.network(
-          "https://images.pexels.com/photos/7640904/pexels-photo-7640904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "$bgState&w=1260&h=750",
           fit: BoxFit.fill,
         )).blurred(
       blur: 8,
-      colorOpacity: 0.15,
+      colorOpacity: 0.4,
       blurColor: Colors.black,
     );
   }
