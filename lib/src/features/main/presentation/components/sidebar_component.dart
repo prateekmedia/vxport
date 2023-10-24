@@ -8,6 +8,7 @@ import 'package:vxport/src/features/projects/presentation/projects_widget.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons/lucide_icons.dart';
+import 'package:vxport/src/utils/constants.dart';
 
 class SidebarComponent extends ConsumerWidget {
   const SidebarComponent({
@@ -23,7 +24,12 @@ class SidebarComponent extends ConsumerWidget {
       "About Website",
       "Settings"
     ];
-    final index = ref.watch(navigationItemStateProvider);
+    var index = ref.watch(navigationItemStateProvider);
+    final isSmall = MediaQuery.sizeOf(context).width <= MagicNumber.breakpoint;
+    index = isSmall && index == null ? -1 : index ?? 0;
+
+    if (index < 0) return const SizedBox();
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
