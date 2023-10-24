@@ -73,10 +73,12 @@ class LinksWidget extends StatelessWidget {
                         color: Colors.grey,
                         backgroundBlendMode: BlendMode.saturation,
                       ),
-                      child: Image.network(
-                          height: 24,
-                          width: 24,
-                          "https://avatars.githubusercontent.com/u/807499?s=24&v=4"),
+                      child: ClipOval(
+                        child: Image.network(
+                            height: 24,
+                            width: 24,
+                            "https://avatars.githubusercontent.com/u/807499?s=24&v=4"),
+                      ),
                     ),
                   ),
                   url: "https://www.fiverr.com/prateek_su",
