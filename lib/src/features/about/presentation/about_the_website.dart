@@ -1,13 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:lucide_icons/lucide_icons.dart';
+import 'package:package_info_plus/package_info_plus.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 import 'package:vxport/src/common_widgets/tap_handler.dart';
 import 'package:vxport/src/features/main/presentation/components/expandable_side_item.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:vxport/src/features/main/presentation/sidebar/links_widget.dart';
 
-class AboutTheWebsite extends StatelessWidget {
+class AboutTheWebsite extends StatefulWidget {
   const AboutTheWebsite({super.key});
+
+  @override
+  State<AboutTheWebsite> createState() => _AboutTheWebsiteState();
+}
+
+class _AboutTheWebsiteState extends State<AboutTheWebsite> {
+  PackageInfo? _info;
+
+  @override
+  void initState() {
+    super.initState();
+    init();
+  }
+
+  Future init() async {
+    final info = await PackageInfo.fromPlatform();
+    setState(() {
+      _info = info;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +57,7 @@ class AboutTheWebsite extends StatelessWidget {
           ),
         ),
         Text(
-          "v0.1.0",
+          "( v${_info?.version ?? "..."} )",
           style: GoogleFonts.lato(
             fontSize: 16,
             fontWeight: FontWeight.w300,

@@ -24,9 +24,7 @@ class SidebarComponent extends ConsumerWidget {
       "About Website",
       "Settings"
     ];
-    var index = ref.watch(navigationItemStateProvider);
-    final isSmall = MediaQuery.sizeOf(context).width <= MagicNumber.breakpoint;
-    index = isSmall && index == null ? -1 : index ?? 0;
+    final index = ref.watch(navigationItemStateProvider) ?? 0;
 
     if (index < 0) return const SizedBox();
 

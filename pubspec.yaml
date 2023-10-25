@@ -1,7 +1,7 @@
 name: vxport
 description: Web Portfolio inspired by VSCode
 publish_to: 'none'
-version: 0.1.0
+version: 0.1.1
 
 environment:
   sdk: '>=3.1.4 <4.0.0'
@@ -18,6 +18,7 @@ dependencies:
   just_the_tooltip: ^0.0.12
   lucide_icons: ^0.257.0
   markdown_widget: ^2.3.1
+  package_info_plus: ^4.2.0
   resizable_widget: ^1.0.5
   themed: ^4.0.0
   url_launcher: ^6.1.14

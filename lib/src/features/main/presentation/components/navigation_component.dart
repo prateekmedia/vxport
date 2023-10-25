@@ -5,7 +5,6 @@ import 'package:vxport/src/features/main/application/navigation_item_state.dart'
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:just_the_tooltip/just_the_tooltip.dart';
 import 'package:lucide_icons/lucide_icons.dart';
-import 'package:vxport/src/utils/constants.dart';
 
 class NavigationComponent extends StatefulWidget {
   const NavigationComponent({
@@ -71,9 +70,7 @@ class NavigationButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    var currentIndex = ref.watch(navigationItemStateProvider);
-    final isSmall = MediaQuery.sizeOf(context).width <= MagicNumber.breakpoint;
-    currentIndex = isSmall && currentIndex == null ? -1 : currentIndex ?? 0;
+    final currentIndex = ref.watch(navigationItemStateProvider) ?? 0;
 
     return MouseHandler(
       onTap: () {

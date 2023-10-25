@@ -19,9 +19,7 @@ class MainWindowArea extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    var index = ref.watch(navigationItemStateProvider);
-    final isSmall = MediaQuery.sizeOf(context).width <= MagicNumber.breakpoint;
-    index = isSmall && index == null ? -1 : index ?? 0;
+    var index = ref.watch(navigationItemStateProvider) ?? 0;
 
     return Column(
       children: [
@@ -57,6 +55,14 @@ class MainWindowArea extends ConsumerWidget {
                             child: ResizableWidget(
                                 percentages: const [0.21, 0.79],
                                 separatorColor: Colors.black.withOpacity(0.6),
+                                onResized: (infoList) {
+                                  if (infoList[0].size < 300) {
+                                    ref
+                                        .read(navigationItemStateProvider
+                                            .notifier)
+                                        .state = -1;
+                                  }
+                                },
                                 children: [
                                   Container(
                                     color: Colors.black.withOpacity(0.3),
