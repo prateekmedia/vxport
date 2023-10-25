@@ -99,7 +99,7 @@ class MainWindowArea extends ConsumerWidget {
                         ),
                         child: Row(
                           children: [
-                            if (index! >= 0)
+                            if (index >= 0)
                               Container(
                                 width: min(350,
                                     MediaQuery.of(context).size.width - 72),
