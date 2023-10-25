@@ -19,6 +19,7 @@ dependencies:
   lucide_icons: ^0.257.0
   markdown_widget: ^2.3.1
   resizable_widget: ^1.0.5
+  themed: ^4.0.0
   url_launcher: ^6.1.14
 
 dev_dependencies:

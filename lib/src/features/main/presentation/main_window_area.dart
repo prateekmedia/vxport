@@ -86,6 +86,7 @@ class MainWindowArea extends ConsumerWidget {
 
                     return SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
+                      physics: const NeverScrollableScrollPhysics(),
                       child: Container(
                         constraints: BoxConstraints(
                           minWidth: MediaQuery.sizeOf(context).width,

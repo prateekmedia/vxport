@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:themed/themed.dart';
 import 'package:vxport/src/common_widgets/mouse_handler.dart';
 import 'package:vxport/src/features/main/application/navigation_item_state.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -24,7 +25,10 @@ class _NavigationComponentState extends State<NavigationComponent> {
       "Links": LucideIcons.link,
       "About Website": Padding(
         padding: const EdgeInsets.all(12.0),
-        child: Image.asset("assets/vxport.png"),
+        child: ChangeColors(
+          saturation: -1,
+          child: Image.asset("assets/vxport.png"),
+        ),
       ),
     };
 
