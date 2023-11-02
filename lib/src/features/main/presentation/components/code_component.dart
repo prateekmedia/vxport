@@ -34,13 +34,43 @@ class CodeComponent extends ConsumerWidget {
               child: const CodeArea(),
             ),
           ),
-        ] else ...[
+        ] else if (selectedFileIndex == 1) ...[
           Expanded(
             child: Container(
                 height: double.infinity,
                 color: Colors.black.withOpacity(0.2),
                 child: MarkdownWidget(
                   data: code,
+                  tocController: ref.read(tocControllerProvider),
+                  padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
+                  config: MarkdownConfig.darkConfig.copy(
+                    configs: [
+                      LinkConfig(
+                        style: GoogleFonts.lato(
+                          color:
+                              ref.watch(codeStyleProvider)["string"]?.color ??
+                                  Colors.yellow,
+                          decoration: TextDecoration.underline,
+                        ),
+                        onTap: (url) => launchUrlString(url),
+                      ),
+                      PConfig(
+                        textStyle: GoogleFonts.lato(
+                          fontSize: 20,
+                          letterSpacing: 22 / 20,
+                        ),
+                      )
+                    ],
+                  ),
+                )),
+          ),
+        ] else if (selectedFileIndex == 2) ...[
+          Expanded(
+            child: Container(
+                height: double.infinity,
+                color: Colors.black.withOpacity(0.2),
+                child: MarkdownWidget(
+                  data: allProjects,
                   tocController: ref.read(tocControllerProvider),
                   padding: const EdgeInsets.fromLTRB(20, 0, 20, 20),
                   config: MarkdownConfig.darkConfig.copy(
@@ -92,6 +122,12 @@ class ActiveFiles extends StatelessWidget {
               tooltip: "Preview of about me",
               icon: LucideIcons.info,
               index: 1,
+            ),
+            OpenFileItem(
+              shortpath: "Preview CLIENT_PROJECTS.md",
+              tooltip: "Preview of my freelancing projects",
+              icon: LucideIcons.info,
+              index: 2,
             ),
           ],
         ),

@@ -51,6 +51,11 @@ class LinksWidget extends StatelessWidget {
                 ),
                 const MiniHeader("Freelancing/Gig work contact"),
                 const LinkItem(
+                  title: "Email",
+                  icon: Icon(Icons.mail, size: 20),
+                  url: "mailto:workwithme@sunal.in",
+                ),
+                const LinkItem(
                   title: "Telegram",
                   icon: Icon(Icons.send, size: 20),
                   url: "https://t.me/prateek_media",
