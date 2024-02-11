@@ -57,7 +57,7 @@ Overall I have worked on 20+ Commercial Flutter apps but here are some notable o
 | Project Name | Description | Store Link |
 | ------------ | ----------- | ---- |
 | Datsme | Merge Social with Psychology | [Android](https://play.google.com/store/apps/details?id=me.dats.com.datsme&hl=en_IN&gl=US&pli=1) & [iOS](https://apps.apple.com/in/app/datsme-social-wellness-app/id1673755666) |
-| Dayhee | Help Parenting Child with Consulation | [Android](https://play.google.com/store/apps/details?id=com.dayhee.app) |
+| Dayhee | Help Parenting Child with Consulation | [Android](https://play.google.com/store/apps/details?id=com.dayhee.id) & [iOS](https://apps.apple.com/in/app/dayhee/id6471941584) |
 | FlashSend | Send payment in a flash | [Android](https://play.google.com/store/apps/details?id=net.flashsd.flashsend&hl=en&gl=US) & [iOS](https://apps.apple.com/us/app/flashsend/id6446861546) |
 | Ava | Women's Fitness and Yoga | [Android](https://play.google.com/store/apps/details?id=com.avafitness.app&hl=en&gl=US) |
 | Select Tube | Reduce Time Waster, Watch selected channels | [Android](https://play.google.com/store/apps/details?id=com.selectTube) & [iOS](https://apps.apple.com/in/app/select-tube-reduce-time-waste/id1624409170) |
@@ -65,7 +65,7 @@ Overall I have worked on 20+ Commercial Flutter apps but here are some notable o
 | Persona App | Make your Persona easily | [Android](https://play.google.com/store/apps/details?id=com.persona_app) |
 | BSG | Be Somethind Great, Stories that inspire | [Android](https://play.google.com/store/apps/details?id=ca.besomethinggreat.app) |
 | Magzee | Create & Manage E-Sports tournaments | [Android](https://play.google.com/store/apps/details?id=live.magzee.app) |
-| Arenda | Rent Home easily | Abandoned |
+| Arenda | Rent Home easily | - |
 | JE Connect | Slack Alternative with Supabase | Internal App |
 | Paint App | Draw, Erase, Snapshot, Share | [Android](https://play.google.com/store/apps/details?id=com.SimpleDrawPaint) |
 | Text Generator | Generate fancy Text | [Android](https://play.google.com/store/apps/details?id=com.text_gen_app) |
