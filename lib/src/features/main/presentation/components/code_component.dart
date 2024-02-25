@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_code_editor/flutter_code_editor.dart';
 import 'package:vxport/src/common_widgets/dividers.dart';
@@ -105,12 +106,23 @@ class ActiveFiles extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = ScrollController();
     return Container(
       height: 44,
       color: Colors.black.withOpacity(0.2),
-      child: const SingleChildScrollView(
-        child: Row(
-          children: [
+      child: Listener(
+        onPointerSignal: (event) {
+          if (event is PointerScrollEvent) {
+            final offset = event.scrollDelta.dy;
+            controller.jumpTo((controller.offset + offset)
+                .clamp(0.0, controller.position.maxScrollExtent));
+          }
+        },
+        child: ListView(
+          controller: controller,
+          physics: const AlwaysScrollableScrollPhysics(),
+          scrollDirection: Axis.horizontal,
+          children: const [
             OpenFileItem(
               shortpath: "INFO.md",
               tooltip: "About me",
