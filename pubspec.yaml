@@ -10,7 +10,9 @@ dependencies:
   blur: ^3.1.0
   flutter:
     sdk: flutter
-  flutter_code_editor: ^0.3.1
+  flutter_code_editor:
+    git:
+      url: https://github.com/prateekmedia/flutter-code-editor.git
   flutter_highlight: ^0.7.0
   flutter_riverpod: ^2.4.4
   google_fonts: ^6.1.0
