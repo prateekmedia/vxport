@@ -1,18 +1,16 @@
 name: vxport
 description: Web Portfolio inspired by VSCode
-publish_to: 'none'
+publish_to: "none"
 version: 0.1.1
 
 environment:
-  sdk: '>=3.1.4 <4.0.0'
+  sdk: ">=3.1.4 <4.0.0"
 
 dependencies:
-  blur: ^3.1.0
+  blur: ^4.0.0
   flutter:
     sdk: flutter
   flutter_code_editor:
-    git:
-      url: https://github.com/prateekmedia/flutter-code-editor.git
   flutter_highlight: ^0.7.0
   flutter_riverpod: ^2.4.4
   google_fonts: ^6.1.0
@@ -20,7 +18,7 @@ dependencies:
   just_the_tooltip: ^0.0.12
   lucide_icons: ^0.257.0
   markdown_widget: ^2.3.1
-  package_info_plus: ^5.0.1
+  package_info_plus: ^8.0.2
   resizable_widget: ^1.0.5
   themed: ^5.0.1
   url_launcher: ^6.1.14
@@ -28,7 +26,7 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^3.0.1
+  flutter_lints: ^4.0.0
 
 flutter:
   uses-material-design: true
