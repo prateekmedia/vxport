@@ -39,15 +39,15 @@ You can find the links from the Links tab in the Sidebar.
 
 ## Get in Touch
 
-I am available for freelance work. Check the links from the Sidebar Links tab for more details.
+If you have a project in mind that you want to discuss with me, then you can click on sidebar links to contact me.
 
 PS: You can also click on the settings icon to change the theme, wallpaper and other things of this website.
 """;
 
 const allProjects = """
-# Client Projects
+# Live Projects
 
-This is the collection of some of my Freelance projects and some other projects which I worked on.
+This is the collection of some of the projects that I have worked on.
 
 If you want to hire me for your next project, you can contact me from the links in the sidebar.
 

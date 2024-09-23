@@ -136,8 +136,8 @@ class ActiveFiles extends StatelessWidget {
               index: 1,
             ),
             OpenFileItem(
-              shortpath: "Preview CLIENT_PROJECTS.md",
-              tooltip: "Preview of my freelancing projects",
+              shortpath: "Preview LIVE_PROJECTS.md",
+              tooltip: "Preview of my work projects",
               icon: LucideIcons.info,
               index: 2,
             ),
