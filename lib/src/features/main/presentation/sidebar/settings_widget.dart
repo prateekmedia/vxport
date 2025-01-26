@@ -43,7 +43,7 @@ class SettingsWidget extends ConsumerWidget {
               ref.read(codeStyleTypeProvider.notifier).state = val.toString();
             },
             underline: const SizedBox(),
-            dropdownColor: Colors.black.withOpacity(0.6),
+            dropdownColor: Colors.black.withValues(alpha: 0.6),
           ),
           onTap: null,
         ),
@@ -89,7 +89,7 @@ class SettingsWidget extends ConsumerWidget {
                       child: Container(
                         padding: const EdgeInsets.all(4),
                         decoration: BoxDecoration(
-                          color: Colors.white.withOpacity(0.8),
+                          color: Colors.white.withValues(alpha: 0.8),
                           borderRadius: BorderRadius.circular(40),
                         ),
                         child: const Icon(
@@ -142,8 +142,9 @@ class SettingsItem extends StatelessWidget {
       onTap: () => onTap?.call(),
       child: (isHovered) => Container(
         decoration: BoxDecoration(
-          color:
-              onTap != null && isHovered ? Colors.white.withOpacity(0.1) : null,
+          color: onTap != null && isHovered
+              ? Colors.white.withValues(alpha: 0.1)
+              : null,
         ),
         child: Row(
           children: [

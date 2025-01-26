@@ -26,37 +26,45 @@ class ExplorerWidget extends ConsumerWidget {
         ),
         Expanded(
           child: Container(
-            color: Colors.black.withOpacity(0.2),
+            color: Colors.black.withValues(alpha: 0.2),
             child: Column(
               children: [
-                TocWidget(
-                  controller: tocController,
-                  shrinkWrap: true,
-                  itemBuilder: (data) => TapHandler(
-                    onTap: () {
-                      final index = ref.read(selectedFileIndexProvider);
-                      if (index == 0) {
-                        // to be done
-                      } else if (index == 1) {
-                        tocController.jumpToIndex(data.index);
-                      }
-                    },
-                    child: OutlineItem(
-                      canExpand: data.toc.node.headingConfig.tag == "h1",
-                      inner: data.toc.node.headingConfig.tag == "h1" ? 1 : 4,
-                      child: Text.rich(
-                        data.toc.node
-                            .copy(
-                                headingConfig: H1Config(
-                                    style: GoogleFonts.lato(
-                              fontSize: 16,
-                              fontWeight: FontWeight.w400,
-                              letterSpacing: 18 / 16,
-                            )))
-                            .childrenSpan,
+                Row(
+                  children: [
+                    Expanded(
+                      child: TocWidget(
+                        controller: tocController,
+                        shrinkWrap: true,
+                        itemBuilder: (data) => TapHandler(
+                          onTap: () {
+                            final index = ref.read(selectedFileIndexProvider);
+                            if (index == 0) {
+                              // to be done
+                            } else if (index == 1) {
+                              tocController.jumpToIndex(data.index);
+                            }
+                          },
+                          child: OutlineItem(
+                            canExpand: data.toc.node.headingConfig.tag == "h1",
+                            inner:
+                                data.toc.node.headingConfig.tag == "h1" ? 1 : 4,
+                            child: Text.rich(
+                              data.toc.node
+                                  .copy(
+                                      headingConfig: H1Config(
+                                          style: GoogleFonts.lato(
+                                    fontSize: 16,
+                                    fontWeight: FontWeight.w400,
+                                    letterSpacing: 18 / 16,
+                                  )))
+                                  .childrenSpan,
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),

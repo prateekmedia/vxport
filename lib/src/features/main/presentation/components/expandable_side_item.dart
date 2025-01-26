@@ -18,11 +18,11 @@ class ExpandableSideItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.2),
+        color: Colors.black.withValues(alpha: 0.2),
         border: Border(
           bottom: BorderSide(
             color: !isExpanded
-                ? Colors.white.withOpacity(0.2)
+                ? Colors.white.withValues(alpha: 0.2)
                 : Colors.transparent,
             width: 2,
           ),

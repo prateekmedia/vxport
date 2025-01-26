@@ -34,7 +34,7 @@ class SidebarComponent extends ConsumerWidget {
           height: 44,
           width: double.infinity,
           padding: const EdgeInsets.symmetric(horizontal: 28),
-          color: Colors.black.withOpacity(0.2),
+          color: Colors.black.withValues(alpha: 0.2),
           child: Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

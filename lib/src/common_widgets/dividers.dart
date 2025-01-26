@@ -9,7 +9,7 @@ class DividerY extends StatelessWidget {
   Widget build(BuildContext context) {
     return VerticalDivider(
       width: 2,
-      color: Colors.black.withOpacity(0.6),
+      color: Colors.black.withValues(alpha: 0.6),
     );
   }
 }
@@ -23,7 +23,7 @@ class DividerXX extends StatelessWidget {
   Widget build(BuildContext context) {
     return Divider(
       height: 2,
-      color: Colors.white.withOpacity(0.2),
+      color: Colors.white.withValues(alpha: 0.2),
     );
   }
 }
@@ -37,7 +37,7 @@ class DividerX extends StatelessWidget {
   Widget build(BuildContext context) {
     return Divider(
       height: 2,
-      color: Colors.black.withOpacity(0.6),
+      color: Colors.black.withValues(alpha: 0.6),
     );
   }
 }

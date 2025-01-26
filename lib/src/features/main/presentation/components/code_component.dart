@@ -31,7 +31,7 @@ class CodeComponent extends ConsumerWidget {
           Expanded(
             child: Container(
               height: double.infinity,
-              color: Colors.black.withOpacity(0.2),
+              color: Colors.black.withValues(alpha: 0.2),
               child: const CodeArea(),
             ),
           ),
@@ -39,7 +39,7 @@ class CodeComponent extends ConsumerWidget {
           Expanded(
             child: Container(
                 height: double.infinity,
-                color: Colors.black.withOpacity(0.2),
+                color: Colors.black.withValues(alpha: 0.2),
                 child: MarkdownWidget(
                   data: code,
                   tocController: ref.read(tocControllerProvider),
@@ -69,7 +69,7 @@ class CodeComponent extends ConsumerWidget {
           Expanded(
             child: Container(
                 height: double.infinity,
-                color: Colors.black.withOpacity(0.2),
+                color: Colors.black.withValues(alpha: 0.2),
                 child: MarkdownWidget(
                   data: allProjects,
                   tocController: ref.read(tocControllerProvider),
@@ -109,7 +109,7 @@ class ActiveFiles extends StatelessWidget {
     final controller = ScrollController();
     return Container(
       height: 44,
-      color: Colors.black.withOpacity(0.2),
+      color: Colors.black.withValues(alpha: 0.2),
       child: Listener(
         onPointerSignal: (event) {
           if (event is PointerScrollEvent) {
@@ -156,7 +156,7 @@ class CurrentFilePath extends StatelessWidget {
     return Container(
       height: 36,
       width: double.infinity,
-      color: Colors.black.withOpacity(0.2),
+      color: Colors.black.withValues(alpha: 0.2),
       padding: const EdgeInsets.symmetric(horizontal: 14),
       child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
@@ -196,7 +196,7 @@ class CodeArea extends ConsumerWidget {
         child: CodeField(
           readOnly: true,
           textStyle: GoogleFonts.jetBrainsMono(fontSize: 20),
-          background: Colors.black.withOpacity(0),
+          background: Colors.black.withValues(alpha: 0),
           controller: controller,
         ),
       ),
@@ -231,7 +231,7 @@ class OpenFileItem extends ConsumerWidget {
         padding: const EdgeInsets.symmetric(horizontal: 12),
         decoration: BoxDecoration(
           color: index == currentIndex || isHovered
-              ? Colors.grey[900]!.withOpacity(0.2)
+              ? Colors.grey[900]!.withValues(alpha: 0.2)
               : Colors.transparent,
           border: Border(
             top: BorderSide(
@@ -241,11 +241,11 @@ class OpenFileItem extends ConsumerWidget {
               width: 2,
             ),
             left: BorderSide(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               width: .5,
             ),
             right: BorderSide(
-              color: Colors.white.withOpacity(0.2),
+              color: Colors.white.withValues(alpha: 0.2),
               width: .5,
             ),
           ),

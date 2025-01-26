@@ -118,7 +118,7 @@ class LinkItem extends StatelessWidget {
       onTap: () => launchUrlString(url),
       child: (isHovered) => Container(
         decoration: BoxDecoration(
-          color: isHovered ? Colors.white.withOpacity(0.1) : null,
+          color: isHovered ? Colors.white.withValues(alpha: 0.1) : null,
         ),
         child: Row(
           children: [

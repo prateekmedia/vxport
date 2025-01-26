@@ -19,13 +19,15 @@ class MainWindowArea extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    var index = ref.watch(navigationItemStateProvider) ?? 0;
+    var index = ref.watch(
+      navigationItemStateProvider.select((val) => val ?? 0),
+    );
 
     return Column(
       children: [
         Container(
           height: 44,
-          color: Colors.black.withOpacity(0.4),
+          color: Colors.black.withValues(alpha: 0.4),
           child: const HeaderComponent(),
         ),
         const DividerX(),
@@ -34,7 +36,7 @@ class MainWindowArea extends ConsumerWidget {
             children: [
               Container(
                 width: 70,
-                color: Colors.black.withOpacity(0.4),
+                color: Colors.black.withValues(alpha: 0.4),
                 child: const Row(
                   children: [
                     Expanded(
@@ -54,10 +56,11 @@ class MainWindowArea extends ConsumerWidget {
                           Expanded(
                             child: ResizableWidget(
                                 percentages: const [0.21, 0.79],
-                                separatorColor: Colors.black.withOpacity(0.6),
+                                separatorColor:
+                                    Colors.black.withValues(alpha: 0.6),
                                 onResized: (infoList) {
                                   Future.microtask(() {
-                                    if (infoList[0].size < 300) {
+                                    if (infoList[0].percentage <= 0.16) {
                                       ref
                                           .read(navigationItemStateProvider
                                               .notifier)
@@ -67,7 +70,7 @@ class MainWindowArea extends ConsumerWidget {
                                 },
                                 children: [
                                   Container(
-                                    color: Colors.black.withOpacity(0.3),
+                                    color: Colors.black.withValues(alpha: 0.3),
                                     child: const Row(
                                       children: [
                                         Expanded(
@@ -77,7 +80,8 @@ class MainWindowArea extends ConsumerWidget {
                                     ),
                                   ),
                                   Container(
-                                    color: Colors.grey[900]!.withOpacity(0.4),
+                                    color: Colors.grey[900]!
+                                        .withValues(alpha: 0.4),
                                     child: const Row(
                                       children: [
                                         Expanded(
@@ -105,7 +109,7 @@ class MainWindowArea extends ConsumerWidget {
                               Container(
                                 width: min(350,
                                     MediaQuery.of(context).size.width - 72),
-                                color: Colors.black.withOpacity(0.3),
+                                color: Colors.black.withValues(alpha: 0.3),
                                 child: const SidebarComponent(),
                               ),
                             Container(
@@ -113,7 +117,7 @@ class MainWindowArea extends ConsumerWidget {
                               // constraints: BoxConstraints(
                               //   minWidth: MediaQuery.sizeOf(context).width,
                               // ),
-                              color: Colors.grey[900]!.withOpacity(0.4),
+                              color: Colors.grey[900]!.withValues(alpha: 0.4),
                               child: const CodeComponent(),
                             )
                           ],
@@ -130,7 +134,7 @@ class MainWindowArea extends ConsumerWidget {
         Container(
           height: 30,
           width: MediaQuery.sizeOf(context).width,
-          color: Colors.blue.withOpacity(0.4),
+          color: Colors.blue.withValues(alpha: 0.4),
           child: const FooterComponent(),
         )
       ],

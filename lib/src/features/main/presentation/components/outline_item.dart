@@ -18,7 +18,7 @@ class OutlineItem extends StatelessWidget {
     bool isExpanded = 1 == 1;
     return Container(
       decoration: BoxDecoration(
-        color: Colors.black.withOpacity(0.08),
+        color: Colors.black.withValues(alpha: 0.08),
       ),
       padding: EdgeInsets.only(left: inner * 12),
       height: 32,
