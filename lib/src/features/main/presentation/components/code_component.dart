@@ -47,7 +47,7 @@ class CodeComponent extends ConsumerWidget {
                   config: MarkdownConfig.darkConfig.copy(
                     configs: [
                       LinkConfig(
-                        style: GoogleFonts.lato(
+                        style: GoogleFonts.inter(
                           color:
                               ref.watch(codeStyleProvider)["string"]?.color ??
                                   Colors.yellow,
@@ -56,7 +56,7 @@ class CodeComponent extends ConsumerWidget {
                         onTap: (url) => launchUrlString(url),
                       ),
                       PConfig(
-                        textStyle: GoogleFonts.lato(
+                        textStyle: GoogleFonts.inter(
                           fontSize: 20,
                           letterSpacing: 22 / 20,
                         ),
@@ -194,6 +194,10 @@ class CodeArea extends ConsumerWidget {
       data: CodeThemeData(styles: codeStyle),
       child: SingleChildScrollView(
         child: CodeField(
+          gutterStyle: const GutterStyle(
+            textStyle: TextStyle(height: 1.5),
+            showLineNumbers: true,
+          ),
           readOnly: true,
           textStyle: GoogleFonts.jetBrainsMono(fontSize: 20),
           background: Colors.black.withValues(alpha: 0),

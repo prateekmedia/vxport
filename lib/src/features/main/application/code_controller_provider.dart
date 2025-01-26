@@ -13,7 +13,11 @@ final codeControllerProvider = Provider<CodeController>(
 const code = """
 # Introduction
 
-Hello there! I'm Prateek Sunal, a student and open-source enthusiast based in Uttarakhand, India. I have a passion for coding and love to give back to the community. I am comfortable with various programming languages including Dart, Python, QML, and C++.
+Hi, I'm **Prateek Sunal**. I'm a *Flutter Developer* and **Open Source enthusiast** based in Haldwani, India.
+- Working in Flutter since 2020. I have worked on 20+ commercial Flutter apps.
+- Participated in **Google Summer of Code '23 & '24** for CCExtractor Organization.
+- Also worked with Rust, React JS, Python, Django
+- I use arch btw, but using all kinds of OS'es for work.
 
 ## About Me
 

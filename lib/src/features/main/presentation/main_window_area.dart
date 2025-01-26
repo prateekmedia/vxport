@@ -20,7 +20,7 @@ class MainWindowArea extends ConsumerWidget {
   @override
   Widget build(BuildContext context, ref) {
     var index = ref.watch(
-      navigationItemStateProvider.select((val) => val ?? 0),
+      navigationItemStateProvider.select((val) => val ?? 2),
     );
 
     return Column(

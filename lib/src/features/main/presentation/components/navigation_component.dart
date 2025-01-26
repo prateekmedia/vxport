@@ -70,7 +70,7 @@ class NavigationButton extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, ref) {
-    final currentIndex = ref.watch(navigationItemStateProvider) ?? 0;
+    final currentIndex = ref.watch(navigationItemStateProvider) ?? 2;
 
     return MouseHandler(
       onTap: () {
