@@ -42,7 +42,7 @@ class ExpandableSideItem extends StatelessWidget {
           Expanded(
             child: Text(
               title.toUpperCase(),
-              style: GoogleFonts.lato(
+              style: GoogleFonts.inter(
                 fontSize: 16,
                 fontWeight: FontWeight.w400,
                 letterSpacing: 18 / 16,

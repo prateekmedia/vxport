@@ -77,7 +77,7 @@ class CodeComponent extends ConsumerWidget {
                   config: MarkdownConfig.darkConfig.copy(
                     configs: [
                       LinkConfig(
-                        style: GoogleFonts.lato(
+                        style: GoogleFonts.inter(
                           color:
                               ref.watch(codeStyleProvider)["string"]?.color ??
                                   Colors.yellow,
@@ -86,7 +86,7 @@ class CodeComponent extends ConsumerWidget {
                         onTap: (url) => launchUrlString(url),
                       ),
                       PConfig(
-                        textStyle: GoogleFonts.lato(
+                        textStyle: GoogleFonts.inter(
                           fontSize: 20,
                           letterSpacing: 22 / 20,
                         ),
@@ -162,7 +162,7 @@ class CurrentFilePath extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         child: Row(
           children: [
-            Text("prateek.sunal.in", style: GoogleFonts.lato(fontSize: 16)),
+            Text("prateek.sunal.in", style: GoogleFonts.inter(fontSize: 16)),
             const SizedBox(
               width: 28,
               child: Center(
@@ -174,7 +174,7 @@ class CurrentFilePath extends StatelessWidget {
             ),
             const Icon(LucideIcons.info, size: 16),
             const SizedBox(width: 6),
-            Text("aboutme.md", style: GoogleFonts.lato(fontSize: 16)),
+            Text("aboutme.md", style: GoogleFonts.inter(fontSize: 16)),
           ],
         ),
       ),
@@ -270,7 +270,7 @@ class OpenFileItem extends ConsumerWidget {
               ),
               child: Text(
                 shortpath,
-                style: GoogleFonts.lato(
+                style: GoogleFonts.inter(
                   fontSize: 17,
                   fontWeight: FontWeight.w300,
                 ),

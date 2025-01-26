@@ -52,7 +52,7 @@ class ExplorerWidget extends ConsumerWidget {
                               data.toc.node
                                   .copy(
                                       headingConfig: H1Config(
-                                          style: GoogleFonts.lato(
+                                          style: GoogleFonts.inter(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w400,
                                     letterSpacing: 18 / 16,

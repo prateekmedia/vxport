@@ -64,7 +64,7 @@ class SelectedFolderWidget extends StatelessWidget {
         const SizedBox(width: 4),
         Text(
           "prateeks_portfolio",
-          style: GoogleFonts.lato(
+          style: GoogleFonts.inter(
               fontSize: 18,
               letterSpacing: 19 / 18,
               fontWeight: FontWeight.w300),

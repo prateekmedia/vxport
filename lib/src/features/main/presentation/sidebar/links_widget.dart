@@ -93,7 +93,7 @@ class MiniHeader extends StatelessWidget {
       padding: const EdgeInsets.only(left: 28.0, top: 16, bottom: 8),
       child: SelectableText(
         title.toUpperCase(),
-        style: GoogleFonts.lato(
+        style: GoogleFonts.inter(
             fontSize: 15, color: Colors.white70, letterSpacing: 18 / 15),
       ),
     );
@@ -130,7 +130,7 @@ class LinkItem extends StatelessWidget {
             ),
             Text(
               title,
-              style: GoogleFonts.lato(
+              style: GoogleFonts.inter(
                 fontSize: 17,
                 fontWeight: FontWeight.w500,
                 letterSpacing: 22 / 17,

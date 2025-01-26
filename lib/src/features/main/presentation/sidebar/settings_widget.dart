@@ -32,7 +32,7 @@ class SettingsWidget extends ConsumerWidget {
                     value: e.toLowerCase(),
                     child: Text(
                       e,
-                      style: GoogleFonts.lato(
+                      style: GoogleFonts.inter(
                         fontSize: 16,
                       ),
                     ),
@@ -157,7 +157,7 @@ class SettingsItem extends StatelessWidget {
             Expanded(
               child: Text(
                 title,
-                style: GoogleFonts.lato(
+                style: GoogleFonts.inter(
                   fontSize: 17,
                   fontWeight: FontWeight.w500,
                   letterSpacing: 22 / 17,

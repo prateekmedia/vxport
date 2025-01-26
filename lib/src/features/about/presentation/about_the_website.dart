@@ -50,7 +50,7 @@ class _AboutTheWebsiteState extends State<AboutTheWebsite> {
         const SizedBox(height: 16),
         Text(
           "VXPort",
-          style: GoogleFonts.lato(
+          style: GoogleFonts.inter(
             fontSize: 24,
             fontWeight: FontWeight.w500,
             letterSpacing: 24 / 22,
@@ -58,7 +58,7 @@ class _AboutTheWebsiteState extends State<AboutTheWebsite> {
         ),
         Text(
           "( v${_info?.version ?? "..."} )",
-          style: GoogleFonts.lato(
+          style: GoogleFonts.inter(
             fontSize: 16,
             fontWeight: FontWeight.w300,
             letterSpacing: 18 / 16,
@@ -67,7 +67,7 @@ class _AboutTheWebsiteState extends State<AboutTheWebsite> {
         const SizedBox(height: 4),
         Text(
           "Web Portfolio made using Flutter",
-          style: GoogleFonts.lato(
+          style: GoogleFonts.inter(
             fontSize: 18,
             fontWeight: FontWeight.w300,
             letterSpacing: 18 / 16,
@@ -75,7 +75,7 @@ class _AboutTheWebsiteState extends State<AboutTheWebsite> {
         ),
         Text(
           "(Inspired from VSCode)",
-          style: GoogleFonts.lato(
+          style: GoogleFonts.inter(
             fontSize: 18,
             fontWeight: FontWeight.w300,
             letterSpacing: 18 / 16,
@@ -88,7 +88,7 @@ class _AboutTheWebsiteState extends State<AboutTheWebsite> {
           },
           child: Text(
             "Created by Prateek Sunal",
-            style: GoogleFonts.lato(
+            style: GoogleFonts.inter(
               fontSize: 16,
               fontWeight: FontWeight.w400,
               letterSpacing: 16 / 14,

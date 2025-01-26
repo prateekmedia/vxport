@@ -45,7 +45,7 @@ class ProjectsWidget extends ConsumerWidget {
                       padding: const EdgeInsets.symmetric(horizontal: 28),
                       child: Text(
                         "\u2022 $subItem",
-                        style: GoogleFonts.lato(
+                        style: GoogleFonts.inter(
                           fontSize: 18,
                           fontWeight: FontWeight.w300,
                           letterSpacing: 20 / 18,

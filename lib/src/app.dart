@@ -14,11 +14,11 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         brightness: Brightness.dark,
-        textTheme: GoogleFonts.latoTextTheme(ThemeData().textTheme),
+        textTheme: GoogleFonts.interTextTheme(ThemeData().textTheme),
       ),
       darkTheme: ThemeData(
         brightness: Brightness.dark,
-        textTheme: GoogleFonts.latoTextTheme(ThemeData.dark().textTheme),
+        textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme),
       ),
       themeMode: ThemeMode.dark,
       home: const AppFrame(),

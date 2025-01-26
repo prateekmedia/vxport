@@ -41,7 +41,7 @@ class SidebarComponent extends ConsumerWidget {
               Expanded(
                 child: Text(
                   names[index].toUpperCase(),
-                  style: GoogleFonts.lato(
+                  style: GoogleFonts.inter(
                     fontSize: 16,
                     fontWeight: FontWeight.w300,
                     letterSpacing: 18 / 16,
