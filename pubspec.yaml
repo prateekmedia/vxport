@@ -1,7 +1,7 @@
 name: vxport
 description: Web Portfolio inspired by VSCode
 publish_to: "none"
-version: 0.1.1
+version: 0.1.69
 
 environment:
   sdk: ">=3.1.4 <4.0.0"
