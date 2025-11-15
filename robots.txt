@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://prateek.sunal.in/sitemap.xml
