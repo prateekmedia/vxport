@@ -1,41 +1,357 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prateek Sunal - Flutter Developer & Open Source Enthusiast">
+    <meta name="author" content="Prateek Sunal">
+    <meta name="theme-color" content="#0a0a0f">
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
+    <title>Prateek Sunal // Temporal Voyager</title>
 
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="manifest" href="manifest.json">
 
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
+    <!-- Fonts: Exo 2 (display), Rajdhani (body), Share Tech Mono (code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;900&family=Rajdhani:wght@300;400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="My Portfolio inspired by VSCode">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="VXPort">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png" />
-
-  <title>VXPort</title>
-  <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/main.css">
 </head>
-
 <body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+    <!-- Three.js Canvas Background -->
+    <canvas id="cosmic-canvas"></canvas>
 
+    <!-- Scan Line Effect -->
+    <div class="scanline"></div>
+
+    <!-- Vignette Overlay -->
+    <div class="vignette"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <div class="glitch-wrapper">
+                    <h1 class="hero-title glitch" data-text="PRATEEK SUNAL">PRATEEK SUNAL</h1>
+                </div>
+                <div class="hero-subtitle-wrapper">
+                    <span class="status-indicator"></span>
+                    <p class="hero-subtitle">FLUTTER ARCHITECT <span class="separator">|</span> OPEN SOURCE VOYAGER</p>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-value">1,369+</span>
+                        <span class="stat-label">GitHub Commits</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">20+</span>
+                        <span class="stat-label">Apps Deployed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value">2x</span>
+                        <span class="stat-label">GSoC Participant</span>
+                    </div>
+                </div>
+                <div class="cta-buttons">
+                    <a href="#mission" class="btn-primary">
+                        <span class="btn-text">INITIATE MISSION</span>
+                        <span class="btn-arrow">→</span>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <span class="btn-text">ESTABLISH CONTACT</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-line"></div>
+                <span class="scroll-text">SCROLL TO EXPLORE</span>
+            </div>
+        </section>
+
+        <!-- Mission Briefing (About) -->
+        <section id="mission" class="section mission-section">
+            <div class="section-header">
+                <span class="section-number">01</span>
+                <h2 class="section-title">MISSION BRIEFING</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="mission-grid">
+                <div class="mission-card main-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <div class="avatar-wrapper">
+                            <img src="https://avatars.githubusercontent.com/u/41370460" alt="Prateek Sunal" class="avatar">
+                            <div class="avatar-ring"></div>
+                        </div>
+                        <h3 class="card-title">IDENTITY MATRIX</h3>
+                        <p class="card-text">
+                            Hi, I'm <strong>Prateek Sunal</strong>. Flutter Developer since 2020 with a passion for
+                            crafting exceptional mobile experiences and contributing to the open source universe.
+                            My journey spans across <strong>20+ commercial applications</strong> and multiple
+                            high-impact open source projects.
+                        </p>
+                        <p class="card-text">
+                            <strong>Google Summer of Code</strong> participant ('23 & '24), constantly pushing
+                            boundaries between code and creativity. I architect solutions that bridge elegant
+                            design with powerful functionality.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="mission-card tech-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <h3 class="card-title">TECH ARSENAL</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <div class="tech-icon">⚡</div>
+                                <span class="tech-name">Flutter</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🦀</div>
+                                <span class="tech-name">Rust</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">⚛️</div>
+                                <span class="tech-name">React</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🐍</div>
+                                <span class="tech-name">Python</span>
+                            </div>
+                            <div class="tech-item">
+                                <div class="tech-icon">🎯</div>
+                                <span class="tech-name">Django</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Launch Pad -->
+        <section id="projects" class="section projects-section">
+            <div class="section-header">
+                <span class="section-number">02</span>
+                <h2 class="section-title">LAUNCH PAD</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="projects-tabs">
+                <button class="tab-btn active" data-tab="opensource">OPEN SOURCE</button>
+                <button class="tab-btn" data-tab="commercial">COMMERCIAL</button>
+            </div>
+
+            <!-- Open Source Projects -->
+            <div id="opensource" class="projects-grid active">
+                <div class="project-card featured">
+                    <div class="project-header">
+                        <h3 class="project-title">AppImage Pool</h3>
+                        <span class="project-tag featured-tag">FEATURED</span>
+                    </div>
+                    <p class="project-description">
+                        Universal App Store for Linux. A comprehensive platform for discovering,
+                        downloading, and managing AppImage applications across all Linux distributions.
+                    </p>
+                    <div class="project-footer">
+                        <a href="https://github.com/prateekmedia/appimagepool" target="_blank" class="project-link">
+                            EXPLORE →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">PsTube</h3>
+                        <span class="project-tag">MULTIMEDIA</span>
+                    </div>
+                    <p class="project-description">
+                        Free, open-source, and privacy-focused YouTube client. Experience YouTube
+                        without ads, tracking, or compromises.
+                    </p>
+                    <div class="project-footer">
+                        <a href="https://github.com/prateekmedia/pstube" target="_blank" class="project-link">
+                            EXPLORE →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">NetSpeedSimplified</h3>
+                        <span class="project-tag">GNOME</span>
+                    </div>
+                    <p class="project-description">
+                        GNOME Shell extension for monitoring network speed. Clean, minimal,
+                        and always at your fingertips in the top panel.
+                    </p>
+                    <div class="project-footer">
+                        <a href="https://github.com/prateekmedia/netspeedsimplified" target="_blank" class="project-link">
+                            EXPLORE →
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-title">Libadwaita for Flutter</h3>
+                        <span class="project-tag">UI/UX</span>
+                    </div>
+                    <p class="project-description">
+                        Bringing GNOME's beautiful Libadwaita widgets to Flutter. Native Linux
+                        design language for cross-platform applications.
+                    </p>
+                    <div class="project-footer">
+                        <a href="https://github.com/gtk-flutter/libadwaita" target="_blank" class="project-link">
+                            EXPLORE →
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Commercial Projects -->
+            <div id="commercial" class="projects-grid">
+                <div class="commercial-list">
+                    <div class="commercial-item">
+                        <div class="commercial-number">01</div>
+                        <div class="commercial-info">
+                            <h4 class="commercial-name">Datsme</h4>
+                            <p class="commercial-desc">Social wellness application</p>
+                        </div>
+                    </div>
+                    <div class="commercial-item">
+                        <div class="commercial-number">02</div>
+                        <div class="commercial-info">
+                            <h4 class="commercial-name">Dayhee</h4>
+                            <p class="commercial-desc">Parenting consultation platform</p>
+                        </div>
+                    </div>
+                    <div class="commercial-item">
+                        <div class="commercial-number">03</div>
+                        <div class="commercial-info">
+                            <h4 class="commercial-name">FlashSend</h4>
+                            <p class="commercial-desc">Fast payment application</p>
+                        </div>
+                    </div>
+                    <div class="commercial-item">
+                        <div class="commercial-number">04</div>
+                        <div class="commercial-info">
+                            <h4 class="commercial-name">Ava</h4>
+                            <p class="commercial-desc">Women's fitness companion</p>
+                        </div>
+                    </div>
+                    <div class="commercial-item">
+                        <div class="commercial-number">05</div>
+                        <div class="commercial-info">
+                            <h4 class="commercial-name">Select Tube</h4>
+                            <p class="commercial-desc">YouTube client application</p>
+                        </div>
+                    </div>
+                    <div class="commercial-item">
+                        <div class="commercial-number">06</div>
+                        <div class="commercial-info">
+                            <h4 class="commercial-name">Nemnem</h4>
+                            <p class="commercial-desc">Children's stories platform</p>
+                        </div>
+                    </div>
+                    <div class="commercial-item">
+                        <div class="commercial-number">07</div>
+                        <div class="commercial-info">
+                            <h4 class="commercial-name">BSG</h4>
+                            <p class="commercial-desc">Inspiration stories collection</p>
+                        </div>
+                    </div>
+                    <div class="commercial-item">
+                        <div class="commercial-number">08</div>
+                        <div class="commercial-info">
+                            <h4 class="commercial-name">Magzee</h4>
+                            <p class="commercial-desc">E-sports tournaments hub</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Transmission -->
+        <section id="contact" class="section contact-section">
+            <div class="section-header">
+                <span class="section-number">03</span>
+                <h2 class="section-title">ESTABLISH CONTACT</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="card-glow"></div>
+                    <div class="card-content">
+                        <h3 class="contact-title">TRANSMISSION CHANNELS</h3>
+                        <p class="contact-subtitle">Ready to collaborate? Choose your preferred channel:</p>
+
+                        <div class="contact-links">
+                            <a href="mailto:workwithme@sunal.in" class="contact-link" target="_blank">
+                                <span class="contact-icon">📧</span>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">workwithme@sunal.in</span>
+                            </a>
+                            <a href="https://github.com/prateekmedia" class="contact-link" target="_blank">
+                                <span class="contact-icon">💻</span>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">@prateekmedia</span>
+                            </a>
+                            <a href="https://linkedin.com/in/prateek-sunal" class="contact-link" target="_blank">
+                                <span class="contact-icon">💼</span>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">prateek-sunal</span>
+                            </a>
+                            <a href="https://x.com/prateek_su" class="contact-link" target="_blank">
+                                <span class="contact-icon">🐦</span>
+                                <span class="contact-label">Twitter/X</span>
+                                <span class="contact-value">@prateek_su</span>
+                            </a>
+                            <a href="https://t.me/prateek_media" class="contact-link" target="_blank">
+                                <span class="contact-icon">✈️</span>
+                                <span class="contact-label">Telegram</span>
+                                <span class="contact-value">@prateek_media</span>
+                            </a>
+                            <a href="https://discord.com/users/prateeksunal" class="contact-link" target="_blank">
+                                <span class="contact-icon">🎮</span>
+                                <span class="contact-label">Discord</span>
+                                <span class="contact-value">prateeksunal</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p class="footer-text">
+                    <span class="footer-label">SYSTEM VERSION</span>
+                    <span class="footer-value">0.2.0</span>
+                    <span class="footer-separator">|</span>
+                    <span class="footer-label">LOCATION</span>
+                    <span class="footer-value">prateek.sunal.in</span>
+                </p>
+                <p class="footer-credits">
+                    Crafted with cosmic energy by <strong>Prateek Sunal</strong> © 2024
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
 </html>
