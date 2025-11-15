@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prateek Sunal - Developer & Creator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Three.js 3D Background Canvas -->
+    <canvas id="bg-canvas"></canvas>
+
+    <!-- Floating Cursor Follower -->
+    <div class="cursor-glow"></div>
+
+    <!-- Navigation -->
+    <nav class="nav-glass">
+        <div class="nav-content">
+            <div class="logo">
+                <span class="logo-bracket">&lt;</span>
+                <span class="logo-text">PS</span>
+                <span class="logo-bracket">/&gt;</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-floating-card">
+                <div class="glitch-wrapper">
+                    <h1 class="hero-title" data-text="PRATEEK SUNAL">PRATEEK SUNAL</h1>
+                </div>
+                <div class="typing-container">
+                    <p class="hero-subtitle">
+                        <span class="typing-text"></span>
+                        <span class="cursor-blink">|</span>
+                    </p>
+                </div>
+                <p class="hero-description">
+                    Crafting innovative open-source solutions & beautiful user experiences
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn-secondary">
+                        <span>Get In Touch</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Floating 3D Profile Image -->
+            <div class="profile-float-container">
+                <div class="profile-3d-card">
+                    <img src="https://avatars.githubusercontent.com/u/41370460?v=4" alt="Prateek Sunal" class="profile-img">
+                    <div class="profile-glow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">01.</span> About Me
+            </h2>
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <p class="about-text">
+                        Hey there! I'm <span class="highlight">Prateek Sunal</span>, a passionate developer who loves creating
+                        <span class="highlight">open-source software</span> that makes a difference. I specialize in building
+                        beautiful, functional applications with a focus on user experience.
+                    </p>
+                    <p class="about-text">
+                        My journey in tech has led me to create projects like <span class="highlight">AppImage Pool</span>,
+                        a universal app store for Linux, and <span class="highlight">PsTube</span>, a free YouTube client.
+                        I'm passionate about <span class="highlight">Flutter</span>, <span class="highlight">Linux</span>,
+                        and creating tools that empower users.
+                    </p>
+                    <p class="about-text">
+                        When I'm not coding, you'll find me exploring new technologies, contributing to the open-source community,
+                        or working on exciting freelance projects.
+                    </p>
+
+                    <div class="tech-stack">
+                        <h3 class="tech-title">Technologies I work with:</h3>
+                        <div class="tech-grid">
+                            <div class="tech-item">Flutter</div>
+                            <div class="tech-item">Dart</div>
+                            <div class="tech-item">JavaScript</div>
+                            <div class="tech-item">TypeScript</div>
+                            <div class="tech-item">React</div>
+                            <div class="tech-item">Node.js</div>
+                            <div class="tech-item">Python</div>
+                            <div class="tech-item">Linux</div>
+                            <div class="tech-item">Git</div>
+                            <div class="tech-item">GNOME</div>
+                            <div class="tech-item">UI/UX</div>
+                            <div class="tech-item">Open Source</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-stats" data-aos="fade-left">
+                    <div class="stat-card">
+                        <div class="stat-icon">🚀</div>
+                        <div class="stat-number" data-target="10">0</div>
+                        <div class="stat-label">Projects Built</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">⭐</div>
+                        <div class="stat-number" data-target="1000">0</div>
+                        <div class="stat-label">GitHub Stars</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">💻</div>
+                        <div class="stat-number" data-target="5">0</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">🌍</div>
+                        <div class="stat-number" data-target="50">0</div>
+                        <div class="stat-label">Contributors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">02.</span> Featured Projects
+            </h2>
+
+            <div class="projects-grid">
+                <!-- Project 1: AppImage Pool -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-number">01</div>
+                    <div class="project-content">
+                        <h3 class="project-title">AppImage Pool</h3>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Linux</span>
+                            <span class="tag">App Store</span>
+                        </div>
+                        <p class="project-description">
+                            The Universal App Store for Linux. No dependency hell, easy one-click portable apps.
+                            Integrate apps directly to your system, hassle-free.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Universal App Store for Linux</li>
+                            <li>One-click portable app installation</li>
+                            <li>Hassle-free system integration</li>
+                        </ul>
+                        <a href="https://github.com/prateekmedia/appimagepool" target="_blank" class="project-link">
+                            View on GitHub
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <!-- Project 2: PsTube -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-number">02</div>
+                    <div class="project-content">
+                        <h3 class="project-title">PsTube</h3>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">YouTube</span>
+                            <span class="tag">Cross-platform</span>
+                        </div>
+                        <p class="project-description">
+                            A free and open-source YouTube client with a beautiful UI. Watch and download videos
+                            without ads, with full playlist support and no login required.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Ad-free YouTube experience</li>
+                            <li>Beautiful, intuitive interface</li>
+                            <li>Download videos & playlists</li>
+                        </ul>
+                        <a href="https://github.com/prateekmedia/pstube" target="_blank" class="project-link">
+                            View on GitHub
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <!-- Project 3: NetSpeedSimplified -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-number">03</div>
+                    <div class="project-content">
+                        <h3 class="project-title">NetSpeedSimplified</h3>
+                        <div class="project-tags">
+                            <span class="tag">GNOME</span>
+                            <span class="tag">Extension</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                        <p class="project-description">
+                            A GNOME Shell extension with extensive customization options. Features clean UI,
+                            adjustable refresh rates, and advanced positioning.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Clean, customizable interface</li>
+                            <li>Adjustable refresh rate</li>
+                            <li>Advanced position options</li>
+                        </ul>
+                        <a href="https://github.com/prateekmedia/netspeedsimplified" target="_blank" class="project-link">
+                            View on GitHub
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+
+                <!-- Project 4: Libadwaita Flutter -->
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-number">04</div>
+                    <div class="project-content">
+                        <h3 class="project-title">Libadwaita Flutter</h3>
+                        <div class="project-tags">
+                            <span class="tag">Flutter</span>
+                            <span class="tag">Libadwaita</span>
+                            <span class="tag">UI Library</span>
+                        </div>
+                        <p class="project-description">
+                            A Flutter library providing Libadwaita widgets. Follows GNOME HIG and is available
+                            on all platforms with extensive widget compatibility.
+                        </p>
+                        <ul class="project-highlights">
+                            <li>Libadwaita widgets for Flutter</li>
+                            <li>Follows GNOME HIG guidelines</li>
+                            <li>Cross-platform compatibility</li>
+                        </ul>
+                        <a href="https://github.com/gtk-flutter/libadwaita" target="_blank" class="project-link">
+                            View on GitHub
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="project-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">
+                <span class="title-number">03.</span> Get In Touch
+            </h2>
+
+            <div class="contact-content">
+                <div class="contact-text" data-aos="fade-right">
+                    <h3 class="contact-title">Let's Create Something Amazing</h3>
+                    <p class="contact-description">
+                        Whether you have a project in mind, want to collaborate on open-source, or just want to say hi,
+                        I'd love to hear from you. I'm currently available for freelance work and exciting opportunities.
+                    </p>
+                </div>
+
+                <div class="contact-links" data-aos="fade-left">
+                    <a href="https://github.com/prateekmedia" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>GitHub</h4>
+                            <p>@prateekmedia</p>
+                        </div>
+                    </a>
+
+                    <a href="https://linkedin.com/in/prateek-sunal" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>LinkedIn</h4>
+                            <p>prateek-sunal</p>
+                        </div>
+                    </a>
+
+                    <a href="https://x.com/prateek_su" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>X (Twitter)</h4>
+                            <p>@prateek_su</p>
+                        </div>
+                    </a>
+
+                    <a href="mailto:workwithme@sunal.in" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Email</h4>
+                            <p>workwithme@sunal.in</p>
+                        </div>
+                    </a>
+
+                    <a href="https://t.me/prateek_media" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"/>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Telegram</h4>
+                            <p>@prateek_media</p>
+                        </div>
+                    </a>
+
+                    <a href="https://discordapp.com/users/prateeksunal" target="_blank" class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515a.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0a12.64 12.64 0 0 0-.617-1.25a.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057a19.9 19.9 0 0 0 5.993 3.03a.078.078 0 0 0 .084-.028a14.09 14.09 0 0 0 1.226-1.994a.076.076 0 0 0-.041-.106a13.107 13.107 0 0 1-1.872-.892a.077.077 0 0 1-.008-.128a10.2 10.2 0 0 0 .372-.292a.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127a12.299 12.299 0 0 1-1.873.892a.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028a19.839 19.839 0 0 0 6.002-3.03a.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.956-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419c0-1.333.955-2.419 2.157-2.419c1.21 0 2.176 1.096 2.157 2.42c0 1.333-.946 2.418-2.157 2.418z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-info">
+                            <h4>Discord</h4>
+                            <p>prateeksunal</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p class="footer-text">
+                    Designed & Built by <span class="highlight">Prateek Sunal</span>
+                </p>
+                <p class="footer-subtext">
+                    Powered by Three.js & creative chaos ✨
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
